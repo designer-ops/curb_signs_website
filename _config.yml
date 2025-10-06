@@ -1,0 +1,17 @@
+title: Curb Signs
+description: Custom curb signs for birthdays, events, and celebrations in the Greater Toronto Area.
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+theme: null
+plugins: []
+
+# Exclude build artifacts
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md

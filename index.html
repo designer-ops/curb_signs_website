@@ -1,113 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Curb Signs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    /* Basic Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f9f9f9; color: #222; }
-    header { background: #333; color: #fff; padding: 20px 0; }
-    .container { width: 90%; max-width: 900px; margin: 0 auto; }
-    nav { float: right; }
-    nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
-    .logo { font-size: 2em; font-weight: bold; letter-spacing: 2px; }
-    .hero { background: url('https://via.placeholder.com/900x300?text=Curb+Signs') center/cover no-repeat; padding: 60px 0; color: #fff; text-align: center; }
-    .hero h1 { font-size: 2.5em; margin-bottom: 20px; text-shadow: 2px 2px 8px #0007; }
-    .hero p { font-size: 1.4em; margin-bottom: 30px; text-shadow: 1px 1px 5px #0006; }
-    .cta-btn { background: #fe7600; color: #fff; padding: 15px 35px; font-size: 1.1em; border: none; border-radius: 30px; cursor: pointer; text-decoration: none; box-shadow: 2px 2px 8px #4443; }
-    section { margin: 48px 0; }
-    h2 { color: #fe7600; margin-bottom: 20px; font-size: 2em; }
-    .about, .pricing, .contact { background: #fff; padding: 30px 20px; border-radius: 8px; box-shadow: 0 2px 8px #ddd; }
-    .pricing-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    .pricing-table th, .pricing-table td { border: 1px solid #eee; padding: 12px; text-align: left; }
-    .pricing-table th { background: #f5f5f5; }
-    footer { background: #333; color: #fff; text-align: center; padding: 15px 0; margin-top: 50px; font-size: 1em; }
-    @media (max-width: 600px) {
-      .container { width: 98%; }
-      .hero { padding: 40px 0; }
-      nav { float: none; text-align: center; margin-top: 10px; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <span class="logo">Curb Signs</span>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div style="clear:both;"></div>
+---
+layout: default
+title: Curb Signs Inc.
+description: Curb Signs Inc. is a full-service signage manufacturer delivering billboards, hoardings, interior displays, and custom fabrication across the Greater Toronto Area.
+---
+
+<div class="page">
+  <header class="site-header">
+    <div class="top-strip">
+      <div class="container top-strip-inner">
+        <img src="https://via.placeholder.com/40x24?text=CA" alt="Canada flag icon">
+        <strong>STAY STRONG, WE WILL GET THROUGH THIS TOGETHER.</strong>
+      </div>
+    </div>
+    <div class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-bar container">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <img src="https://via.placeholder.com/180x60?text=Curb+Signs" alt="Curb Signs Inc. logo">
+        </a>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+            <span class="nav-toggle-box" aria-hidden="true">
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+            </span>
+            Menu
+          </button>
+          <ul id="primary-menu">
+            <li><a href="#who-we-are">Home</a></li>
+            <li class="has-submenu"><a href="#products" aria-haspopup="true">Products / Gallery</a>
+              <ul class="submenu">
+                <li><a href="https://curbsigns.ca/a-frames/">A-frames</a></li>
+                <li><a href="https://curbsigns.ca/awnings/">Awnings</a></li>
+                <li><a href="https://curbsigns.ca/banners/">Banners</a></li>
+                <li><a href="https://curbsigns.ca/billboards/">Billboards</a></li>
+                <li><a href="https://curbsigns.ca/channel-letters/">Channel Letters</a></li>
+                <li><a href="https://curbsigns.ca/construction-trailers/">Construction Trailers</a></li>
+                <li><a href="https://curbsigns.ca/custom-work/">Custom Work</a></li>
+                <li><a href="https://curbsigns.ca/flags/">Flags</a></li>
+                <li><a href="https://curbsigns.ca/hoardings/">Hoardings</a></li>
+                <li><a href="https://curbsigns.ca/interior-displays/">Interior Displays</a></li>
+                <li><a href="https://curbsigns.ca/interior-letters/">Interior Letters</a></li>
+                <li><a href="https://curbsigns.ca/lightboxes/">Lightboxes</a></li>
+                <li><a href="https://curbsigns.ca/sales-centres/">Sales Centres</a></li>
+                <li><a href="https://curbsigns.ca/sample-boards/">Sample Boards</a></li>
+                <li><a href="https://curbsigns.ca/skid-signs/">Skid Signs</a></li>
+                <li><a href="https://curbsigns.ca/vinyls/">Vinyls</a></li>
+                <li><a href="https://curbsigns.ca/wallpapers/">Wallpapers</a></li>
+              </ul>
+            </li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://curbsigns.ca/category/blog/">Blog</a></li>
+            <li class="ppe-link"><a href="https://shop.curbsigns.ca/" target="_blank" rel="noopener">PPE Store</a><span class="nav-badge">New</span></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <div class="hero">
-    <div class="container">
-      <h1>Custom Curb Signs for Any Occasion</h1>
-      <p>Order personalized curb signs for birthdays, events, and celebrations. Fast, affordable, and local in the GTA!</p>
-      <a href="#contact" class="cta-btn">Order Now</a>
-    </div>
-  </div>
+  <main>
+    <section id="who-we-are" class="section blockquote-area">
+      <div class="container">
+        <h2>Who We Are</h2>
+        <blockquote>
+          Curb Signs Inc. specializes in manufacturing custom made signs based on your vision. As a successful full-service provider of innovative and high quality signs, we are dedicated to surpassing industry standards with exceptionally crafted products that will stand the test of time. We know that product excellence starts with top of the line equipment and materials, so we work with nothing but the best. As we continue to stand for the highest quality and most technologically advanced products available, we also pride ourselves on being the most knowledgeable and skilled individuals in the industry. With our in-house team working hard to provide you with exceptionally crafted signs that have lasting appeal, Curb Signs Inc. knows what it takes to be a leader in signage manufacturing and design.
+        </blockquote>
+      </div>
+    </section>
 
-  <section id="about">
-    <div class="container about">
-      <h2>About Us</h2>
-      <p>
-        Curb Signs has been serving the Greater Toronto Area with custom curb signs for over 10 years. From birthdays to graduations,
-        our vibrant, weather-resistant signs make every occasion special. We pride ourselves on fast turnaround, competitive pricing,
-        and friendly service.
-      </p>
-    </div>
-  </section>
+    <section id="services" class="section services-area">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <span class="service-icon"><i class="fa fa-group" aria-hidden="true"></i></span>
+            <h3><a href="https://curbsigns.ca/consultation/">Consultation</a></h3>
+          </div>
+          <div class="service-card">
+            <span class="service-icon"><i class="fa fa-print" aria-hidden="true"></i></span>
+            <h3><a href="https://curbsigns.ca/design-print/">Design + Print</a></h3>
+          </div>
+          <div class="service-card">
+            <span class="service-icon"><i class="fa fa-object-ungroup" aria-hidden="true"></i></span>
+            <h3><a href="https://curbsigns.ca/custom-fabrication/">Custom Fabrication</a></h3>
+          </div>
+          <div class="service-card">
+            <span class="service-icon"><i class="fa fa-download" aria-hidden="true"></i></span>
+            <h3><a href="https://curbsigns.ca/installation/">Installation</a></h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="pricing">
-    <div class="container pricing">
-      <h2>Pricing</h2>
-      <table class="pricing-table">
-        <tr>
-          <th>Sign Type</th>
-          <th>Price</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>Standard Birthday Sign</td>
-          <td>$40</td>
-          <td>Includes name, age, and themed graphics</td>
-        </tr>
-        <tr>
-          <td>Custom Event Sign</td>
-          <td>$50+</td>
-          <td>Personalized for weddings, anniversaries, or corporate events</td>
-        </tr>
-        <tr>
-          <td>Delivery (GTA)</td>
-          <td>$10</td>
-          <td>Contact us for other locations</td>
-        </tr>
-      </table>
-      <p>Contact us for bulk orders or special requests!</p>
-    </div>
-  </section>
+    <section id="call-to-action" class="section action-area">
+      <div class="overlay"></div>
+      <div class="container">
+        <p>WORK UNTIL YOUR IDOLS BECOME RIVALS.</p>
+      </div>
+    </section>
 
-  <section id="contact">
-    <div class="container contact">
-      <h2>Contact</h2>
-      <p>
-        Ready to order your custom curb sign? <br>
-        Email us at <a href="mailto:orders@curbsigns.ca">orders@curbsigns.ca</a> <br>
-        Or call: <a href="tel:555-123-4567">(555) 123-4567</a>
-      </p>
-      <p>
-        Follow us on <a href="#">Instagram</a> and <a href="#">Facebook</a>!
-      </p>
-    </div>
-  </section>
+    <section id="latest-projects" class="section latest-projects">
+      <div class="container">
+        <h2>Latest Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="https://via.placeholder.com/350x250?text=Project+1" alt="Another chatime store! Beautiful channel letters @chatimecanada">
+            <div class="project-caption">
+              <h3><a href="https://www.instagram.com/p/CpVl_vEPTaj/" target="_blank" rel="noopener">Another chatime store!</a></h3>
+              <p>Beautiful channel letters @chatimecanada</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="https://via.placeholder.com/350x250?text=Project+2" alt="New channel letters @theguptagroup">
+            <div class="project-caption">
+              <h3><a href="https://www.instagram.com/p/CpVlVpEPFHS/" target="_blank" rel="noopener">New channel letters</a></h3>
+              <p>@theguptagroup</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="https://via.placeholder.com/350x250?text=Project+3" alt="New massive refaces @medallion_corp">
+            <div class="project-caption">
+              <h3><a href="https://www.instagram.com/p/CpVk-UDPsCn/" target="_blank" rel="noopener">New massive refaces</a></h3>
+              <p>@medallion_corp</p>
+            </div>
+          </article>
+        </div>
+        <div class="cta-row">
+          <a class="instagram-button" href="https://www.instagram.com/curbsignsinc/" target="_blank" rel="noopener">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            Check out our projects on Instagram!
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    &copy; 2025 Curb Signs. All rights reserved.
+    <section id="clients" class="section clients-area">
+      <div class="container">
+        <h2>Our Clients</h2>
+        <div class="clients-grid">
+          {% for index in (1..14) %}
+          <div class="client">
+            <img src="https://via.placeholder.com/150x75?text=Client%20{{ index }}" alt="Client logo {{ index }}">
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section products-area">
+      <div class="container">
+        <h2>Our Products</h2>
+        <div class="products-grid">
+          <article class="product-card">
+            <img src="https://via.placeholder.com/350x250?text=Billboards" alt="Billboards">
+            <h3><a href="https://curbsigns.ca/billboards/">Billboards</a></h3>
+          </article>
+          <article class="product-card">
+            <img src="https://via.placeholder.com/350x250?text=Channel+Letters" alt="Channel Letters">
+            <h3><a href="https://curbsigns.ca/channel-letters/">Channel Letters</a></h3>
+          </article>
+          <article class="product-card">
+            <img src="https://via.placeholder.com/350x250?text=Custom+Work" alt="Custom Work">
+            <h3><a href="https://curbsigns.ca/custom-work/">Custom Work</a></h3>
+          </article>
+          <article class="product-card">
+            <img src="https://via.placeholder.com/350x250?text=Hoardings" alt="Hoardings">
+            <h3><a href="https://curbsigns.ca/hoardings/">Hoardings</a></h3>
+          </article>
+          <article class="product-card">
+            <img src="https://via.placeholder.com/350x250?text=Interior+Displays" alt="Interior Displays">
+            <h3><a href="https://curbsigns.ca/interior-displays/">Interior Displays</a></h3>
+          </article>
+          <article class="product-card">
+            <img src="https://via.placeholder.com/350x250?text=Sales+Centres" alt="Sales Centres">
+            <h3><a href="https://curbsigns.ca/sales-centres/">Sales Centres</a></h3>
+          </article>
+        </div>
+        <div class="cta-row">
+          <a class="primary-button" href="https://curbsigns.ca/product/">See all products</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="facts" class="section facts-area">
+      <div class="container">
+        <h2>Quick Facts</h2>
+        <div class="facts-grid">
+          <div class="fact">
+            <span class="fact-number">10,588</span>
+            <span class="fact-label">Completed Projects</span>
+          </div>
+          <div class="fact">
+            <span class="fact-number">793</span>
+            <span class="fact-label">Erected Billboards</span>
+          </div>
+          <div class="fact">
+            <span class="fact-number">21,721</span>
+            <span class="fact-label">A-Frames Assembled</span>
+          </div>
+          <div class="fact">
+            <span class="fact-number">279</span>
+            <span class="fact-label">Sales Centres Completed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-widgets">
+      <div class="footer-column contact-info">
+        <h3>Contact Info</h3>
+        <p><i class="fa fa-phone" aria-hidden="true"></i> <span>Phone:</span> <a href="tel:19055037030">905.503.7030</a></p>
+        <p><i class="fa fa-envelope" aria-hidden="true"></i> <span>Email:</span> <a href="mailto:info@curbsigns.ca">info@curbsigns.ca</a></p>
+      </div>
+      <div class="footer-column social-links">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/curbsignsinc/"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          <li><a href="https://www.facebook.com/curbsigns"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/curbsigns"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="https://twitter.com/CurbSignsinc"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-meta">
+      <p>Curb Signs Inc. &copy; {{ site.time | date: '%Y' }}</p>
+    </div>
   </footer>
-</body>
-</html>
+</div>
