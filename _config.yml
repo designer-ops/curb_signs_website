@@ -1,7 +1,8 @@
 title: Curb Signs
 description: Custom curb signs for birthdays, events, and celebrations in the Greater Toronto Area.
-baseurl: ""
-url: ""
+baseurl: "/curb_signs_website"
+url: "https://designer-ops.github.io"
+repository: designer-ops/curb_signs_website
 
 # Build settings
 markdown: kramdown
