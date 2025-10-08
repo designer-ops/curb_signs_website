@@ -18,6 +18,6 @@ This repository hosts the source for the **Curb Signs** marketing site. The proj
 ## Deployment
 
 GitHub Pages will automatically build and deploy the site whenever changes are
-pushed to the default `master` branch. No additional build steps are required.
+pushed to the default `main` branch. No additional build steps are required.
 If you are working from another branch, merge or fast-forward your work on to
-`master` and push that branch to trigger an updated deployment.
+`main` and push that branch to trigger an updated deployment.
