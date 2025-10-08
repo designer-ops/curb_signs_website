@@ -13,7 +13,7 @@ This repository hosts the source for the **Curb Signs** marketing site. The proj
    ```bash
    bundle exec jekyll serve
    ```
-4. Visit the site at <http://localhost:4000>.
+4. Visit the site at <http://localhost:4000/curb_signs_website/>.
 
 ## Deployment
 
