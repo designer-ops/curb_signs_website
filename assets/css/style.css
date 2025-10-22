@@ -1,9 +1,9 @@
 :root {
-  --accent: #ff5c1c;
-  --accent-dark: #d94a12;
+  --accent: #29a53c;
+  --accent-dark: #29a53c;
   --dark: #121212;
   --light: #f5f6f8;
-  --text: #1c1c1c;
+  --text: #444;
 }
 
 * {
@@ -110,7 +110,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 0.55rem 1rem;
   border-radius: 999px;
-  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -240,11 +240,9 @@ img {
 }
 
 .section h2 {
-  font-family: 'Montserrat', 'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.1em;
   margin-bottom: 2.5rem;
   position: relative;
   color: var(--dark);
@@ -300,8 +298,8 @@ img {
   height: 72px;
   margin: 0 auto 1.25rem;
   border-radius: 50%;
-  background: rgba(255, 92, 28, 0.12);
-  color: var(--accent);
+  background: var(--accent);
+  color: white;
   display: grid;
   place-items: center;
   font-size: 1.8rem;
@@ -571,6 +569,11 @@ img {
   text-align: center;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.widget-title {
+  font-size: 56px;
   text-transform: uppercase;
 }
 
