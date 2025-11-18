@@ -428,8 +428,14 @@ img {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.75rem;
+}
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
 }
 
 .product-card {
@@ -442,7 +448,6 @@ img {
 }
 
 .product-card img {
-  height: 190px;
   object-fit: cover;
 }
 
