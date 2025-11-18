@@ -43,27 +43,6 @@ img {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
-.top-strip {
-  background: #222;
-  color: #fff;
-}
-
-.top-strip-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0.75rem 0;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.top-strip-inner img {
-  height: 32px;
-  width: auto;
-}
-
 .hero {
   position: relative;
   min-height: 70vh;
@@ -93,7 +72,7 @@ img {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 2.75rem 0 2rem;
+  padding: 2.75rem 2rem;
 }
 
 .brand img {
@@ -215,10 +194,6 @@ img {
 .has-submenu:hover > .submenu,
 .has-submenu:focus-within > .submenu {
   display: flex;
-}
-
-.ppe-link {
-  position: relative;
 }
 
 .nav-badge {
@@ -674,12 +649,6 @@ img {
 }
 
 @media (max-width: 540px) {
-  .top-strip-inner {
-    flex-direction: column;
-    text-align: center;
-    letter-spacing: 0.05em;
-  }
-
   .hero-bar {
     padding-top: 2rem;
   }
