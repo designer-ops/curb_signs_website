@@ -449,6 +449,8 @@ img {
 
 .product-card img {
   object-fit: cover;
+  height: 190px;
+  width: 100%;
 }
 
 .product-card h3 {
