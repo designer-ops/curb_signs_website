@@ -483,17 +483,14 @@ img {
 }
 
 .facts-area {
-  background: #111;
-  color: #fff;
+  background: #fff;
+  color: #29a53c;
 }
 
 .facts-area h2 {
-  color: #fff;
+  color: #444;
 }
 
-.facts-area h2::after {
-  background: #fff;
-}
 
 .facts-grid {
   display: grid;
@@ -514,6 +511,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.85rem;
+  color: #444;
 }
 
 .site-footer {
