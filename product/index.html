@@ -1,0 +1,149 @@
+---
+layout: default
+title: All Products | Curb Signs Inc.
+description: Browse the full Curb Signs product gallery and filter by type.
+---
+
+<div class="page">
+  <header class="site-header hero hero-compact">
+    <div class="hero-overlay"></div>
+    <div class="hero-bar container">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/curb-signsing-white.png' | relative_url }}" alt="Curb Signs Inc. logo">
+      </a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-box" aria-hidden="true">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </span>
+          Menu
+        </button>
+        <ul id="primary-menu">
+          <li><a href="{{ '/' | relative_url }}#who-we-are">Home</a></li>
+          <li class="has-submenu"><a href="{{ '/product/' | relative_url }}" aria-haspopup="true">Products / Gallery</a>
+            <ul class="submenu">
+              <li><a href="{{ '/product/' | relative_url }}?category=a-frames">A-frames</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=awnings">Awnings</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=banners">Banners</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=billboards">Billboards</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=channel-letters">Channel Letters</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=construction-trailers">Construction Trailers</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=custom-work">Custom Work</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=flags">Flags</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=hoardings">Hoardings</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=interior-displays">Interior Displays</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=interior-letters">Interior Letters</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=lightboxes">Lightboxes</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=sales-centres">Sales Centres</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=sample-boards">Sample Boards</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=skid-signs">Skid Signs</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=vinyls">Vinyls</a></li>
+              <li><a href="{{ '/product/' | relative_url }}?category=wallpapers">Wallpapers</a></li>
+            </ul>
+          </li>
+          <li><a href="{{ '/' | relative_url }}#services">Services</a></li>
+          <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="products-page">
+    <section class="section gallery-section">
+      <div class="container">
+        <div class="gallery-head">
+          <div>
+            <span class="eyebrow">Full gallery</span>
+            <h2>All products</h2>
+            <p>Tap a filter to spotlight one product type or view them all at once.</p>
+          </div>
+          <div class="gallery-count"><strong data-gallery-count>17</strong> products</div>
+        </div>
+
+        <div class="gallery-layout">
+          <aside class="gallery-filters" aria-label="Product filters">
+            <div class="filter-title">
+              <p class="eyebrow">Filters</p>
+              <h3>Browse by type</h3>
+            </div>
+            <div class="filter-pills" role="group" aria-label="Filter products by category">
+              <button type="button" class="filter-pill is-active" data-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="filter-pill" data-filter="a-frames" aria-pressed="false">A-frames</button>
+              <button type="button" class="filter-pill" data-filter="awnings" aria-pressed="false">Awnings</button>
+              <button type="button" class="filter-pill" data-filter="banners" aria-pressed="false">Banners</button>
+              <button type="button" class="filter-pill" data-filter="billboards" aria-pressed="false">Billboards</button>
+              <button type="button" class="filter-pill" data-filter="channel-letters" aria-pressed="false">Channel Letters</button>
+              <button type="button" class="filter-pill" data-filter="construction-trailers" aria-pressed="false">Construction Trailers</button>
+              <button type="button" class="filter-pill" data-filter="custom-work" aria-pressed="false">Custom Work</button>
+              <button type="button" class="filter-pill" data-filter="flags" aria-pressed="false">Flags</button>
+              <button type="button" class="filter-pill" data-filter="hoardings" aria-pressed="false">Hoardings</button>
+              <button type="button" class="filter-pill" data-filter="interior-displays" aria-pressed="false">Interior Displays</button>
+              <button type="button" class="filter-pill" data-filter="interior-letters" aria-pressed="false">Interior Letters</button>
+              <button type="button" class="filter-pill" data-filter="lightboxes" aria-pressed="false">Lightboxes</button>
+              <button type="button" class="filter-pill" data-filter="sales-centres" aria-pressed="false">Sales Centres</button>
+              <button type="button" class="filter-pill" data-filter="sample-boards" aria-pressed="false">Sample Boards</button>
+              <button type="button" class="filter-pill" data-filter="skid-signs" aria-pressed="false">Skid Signs</button>
+              <button type="button" class="filter-pill" data-filter="vinyls" aria-pressed="false">Vinyls</button>
+              <button type="button" class="filter-pill" data-filter="wallpapers" aria-pressed="false">Wallpapers</button>
+            </div>
+          </aside>
+
+          <div class="gallery-grid" data-gallery role="list">
+            {% for photo in site.static_files %}
+              {% assign rel_path = photo.relative_path | default: photo.path %}
+              {% if rel_path contains "/assets/images/products_categories/" and photo.name != ".DS_Store" %}
+                {% assign folder_name = rel_path | split: "/assets/images/products_categories/" | last | split: "/" | first %}
+                {% assign slug = folder_name | downcase | replace: " ", "-" %}
+                {% if folder_name == "Awning" %}{% assign slug = "awnings" %}{% endif %}
+                {% if folder_name == "Custom" %}{% assign slug = "custom-work" %}{% endif %}
+                {% if folder_name == "Vinyl" %}{% assign slug = "vinyls" %}{% endif %}
+                <article class="gallery-card" data-category="{{ slug }}" role="listitem">
+                  <div class="gallery-media">
+                    <img src="{{ photo.path | relative_url }}" alt="{{ folder_name }} photo" loading="lazy">
+                  </div>
+                </article>
+              {% endif %}
+            {% endfor %}
+
+            <p class="gallery-empty" data-gallery-empty hidden>No items match this filter yet.</p>
+            <div class="gallery-sentinel" data-gallery-sentinel aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="gallery-modal" data-gallery-modal aria-modal="true" role="dialog" aria-label="Image preview" hidden>
+    <div class="gallery-modal__backdrop" data-gallery-modal-close></div>
+    <div class="gallery-modal__content">
+      <button class="gallery-modal__close" type="button" data-gallery-modal-close aria-label="Close preview">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <img data-gallery-modal-image src="" alt="">
+    </div>
+  </div>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-widgets">
+      <div class="footer-column contact-info">
+        <h3>Contact Info</h3>
+        <p><i class="fa fa-phone" aria-hidden="true"></i> <span>Phone:</span> <a href="tel:19055037030">905.503.7030</a></p>
+        <p><i class="fa fa-envelope" aria-hidden="true"></i> <span>Email:</span> <a href="mailto:info@curbsigns.ca">info@curbsigns.ca</a></p>
+      </div>
+      <div class="footer-column social-links">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/curbsignsinc/"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          <li><a href="https://www.facebook.com/curbsigns"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/curbsigns"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="https://twitter.com/CurbSignsinc"><i class="fa-brands fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-meta">
+      <p>Curb Signs Inc. &copy; {{ site.time | date: '%Y' }}</p>
+    </div>
+  </footer>
+</div>

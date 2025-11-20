@@ -25,30 +25,30 @@ description: Curb Signs Inc. is a full-service signage manufacturer delivering b
             Menu
           </button>
           <ul id="primary-menu">
-            <li><a href="#who-we-are">Home</a></li>
-            <li class="has-submenu"><a href="#products" aria-haspopup="true">Products / Gallery</a>
+            <li><a href="{{ '/' | relative_url }}#who-we-are">Home</a></li>
+            <li class="has-submenu"><a href="{{ '/product/' | relative_url }}" aria-haspopup="true">Products / Gallery</a>
               <ul class="submenu">
-                <li><a href="https://curbsigns.ca/a-frames/">A-frames</a></li>
-                <li><a href="https://curbsigns.ca/awnings/">Awnings</a></li>
-                <li><a href="https://curbsigns.ca/banners/">Banners</a></li>
-                <li><a href="https://curbsigns.ca/billboards/">Billboards</a></li>
-                <li><a href="https://curbsigns.ca/channel-letters/">Channel Letters</a></li>
-                <li><a href="https://curbsigns.ca/construction-trailers/">Construction Trailers</a></li>
-                <li><a href="https://curbsigns.ca/custom-work/">Custom Work</a></li>
-                <li><a href="https://curbsigns.ca/flags/">Flags</a></li>
-                <li><a href="https://curbsigns.ca/hoardings/">Hoardings</a></li>
-                <li><a href="https://curbsigns.ca/interior-displays/">Interior Displays</a></li>
-                <li><a href="https://curbsigns.ca/interior-letters/">Interior Letters</a></li>
-                <li><a href="https://curbsigns.ca/lightboxes/">Lightboxes</a></li>
-                <li><a href="https://curbsigns.ca/sales-centres/">Sales Centres</a></li>
-                <li><a href="https://curbsigns.ca/sample-boards/">Sample Boards</a></li>
-                <li><a href="https://curbsigns.ca/skid-signs/">Skid Signs</a></li>
-                <li><a href="https://curbsigns.ca/vinyls/">Vinyls</a></li>
-                <li><a href="https://curbsigns.ca/wallpapers/">Wallpapers</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=a-frames">A-frames</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=awnings">Awnings</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=banners">Banners</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=billboards">Billboards</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=channel-letters">Channel Letters</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=construction-trailers">Construction Trailers</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=custom-work">Custom Work</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=flags">Flags</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=hoardings">Hoardings</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=interior-displays">Interior Displays</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=interior-letters">Interior Letters</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=lightboxes">Lightboxes</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=sales-centres">Sales Centres</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=sample-boards">Sample Boards</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=skid-signs">Skid Signs</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=vinyls">Vinyls</a></li>
+                <li><a href="{{ '/product/' | relative_url }}?category=wallpapers">Wallpapers</a></li>
               </ul>
             </li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{ '/' | relative_url }}#services">Services</a></li>
+            <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -217,7 +217,7 @@ description: Curb Signs Inc. is a full-service signage manufacturer delivering b
           </article>
         </div>
         <div class="cta-row">
-          <a class="primary-button" href="https://curbsigns.ca/product/">See all products</a>
+          <a class="primary-button" href="{{ '/product/' | relative_url }}">See all products</a>
         </div>
       </div>
     </section>
