@@ -11,42 +11,7 @@ description: Browse the full Curb Signs product gallery and filter by type.
       <a class="brand" href="{{ '/' | relative_url }}">
         <img src="{{ '/assets/images/curb-signsing-white.png' | relative_url }}" alt="Curb Signs Inc. logo">
       </a>
-      <nav class="primary-nav" aria-label="Main navigation">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
-          <span class="nav-toggle-box" aria-hidden="true">
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-          </span>
-          Menu
-        </button>
-        <ul id="primary-menu">
-          <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li class="has-submenu"><a href="{{ '/product/' | relative_url }}" aria-haspopup="true">Products / Gallery</a>
-            <ul class="submenu">
-              <li><a href="{{ '/product/' | relative_url }}?category=a-frames">A-frames</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=awnings">Awnings</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=banners">Banners</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=billboards">Billboards</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=channel-letters">Channel Letters</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=construction-trailers">Construction Trailers</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=custom-work">Custom Work</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=flags">Flags</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=hoardings">Hoardings</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=interior-displays">Interior Displays</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=interior-letters">Interior Letters</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=lightboxes">Lightboxes</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=sales-centres">Sales Centres</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=sample-boards">Sample Boards</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=skid-signs">Skid Signs</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=vinyls">Vinyls</a></li>
-              <li><a href="{{ '/product/' | relative_url }}?category=wallpapers">Wallpapers</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ '/' | relative_url }}#services">Services</a></li>
-          <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
-        </ul>
-      </nav>
+      {% include nav.html %}
     </div>
   </header>
 
