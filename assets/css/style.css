@@ -85,7 +85,7 @@ img {
 }
 
 .hero-compact {
-  min-height: 46vh;
+  min-height: 164px;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.6)), url('../images/products/billboard.jpg') center/cover;
   align-items: flex-end;
 }
@@ -204,8 +204,8 @@ img {
   display: flex;
 }
 
-.primary-nav li:hover > a,
-.primary-nav li:focus-within > a {
+.primary-nav li:hover>a,
+.primary-nav li:focus-within>a {
   color: var(--accent);
 }
 
@@ -239,12 +239,12 @@ img {
   color: var(--accent);
 }
 
-.submenu-open > .submenu {
+.submenu-open>.submenu {
   display: flex;
 }
 
-.has-submenu:hover > .submenu,
-.has-submenu:focus-within > .submenu {
+.has-submenu:hover>.submenu,
+.has-submenu:focus-within>.submenu {
   display: flex;
 }
 
