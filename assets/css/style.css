@@ -75,13 +75,23 @@ img {
 }
 
 .hero-bar {
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 2.75rem 2rem;
+  transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-bar.has-background {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85)), url('../images/products/billboard.jpg') center/cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero-compact {

@@ -242,4 +242,33 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+
+  // Sticky Nav Logic
+  const heroBar = document.querySelector('.hero-bar');
+  const heroVideo = document.querySelector('.hero-video');
+
+  if (heroBar) {
+    const handleScroll = () => {
+      let shouldHaveBackground = false;
+
+      if (heroVideo) {
+        // Main page: show background when scrolled past 60% of the viewport height
+        // The hero is min 70vh, so this ensures background is on before we hit the white section
+        shouldHaveBackground = window.scrollY > (window.innerHeight * 0.6);
+      } else {
+        // Product page: always show background (or after very slight scroll)
+        shouldHaveBackground = window.scrollY > 10;
+      }
+
+      if (shouldHaveBackground) {
+        heroBar.classList.add('has-background');
+      } else {
+        heroBar.classList.remove('has-background');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+  }
 });
