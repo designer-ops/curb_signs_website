@@ -59,7 +59,8 @@ img {
   align-items: flex-start;
 }
 
-.hero-image {
+.hero-image,
+.hero-video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -352,7 +353,7 @@ img {
 
 .action-area {
   position: relative;
-  background: url('https://via.placeholder.com/1920x1080?text=Curb+Signs') center/cover fixed;
+  background: url('../images/hero.jfif') center/cover fixed;
   text-align: center;
   color: #fff;
   overflow: hidden;
