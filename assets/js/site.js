@@ -271,4 +271,49 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial check
   }
+  // Facts Animation
+  const factNumbers = document.querySelectorAll('.fact-number');
+  if (factNumbers.length > 0) {
+    const animateValue = (obj, start, end, duration) => {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        // Ease out quart
+        const easeProgress = 1 - Math.pow(1 - progress, 4);
+        
+        const current = Math.floor(easeProgress * (end - start) + start);
+        obj.textContent = current.toLocaleString();
+        
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        } else {
+            obj.textContent = end.toLocaleString();
+        }
+      };
+      window.requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const target = entry.target;
+            const endValue = parseInt(target.getAttribute('data-target'), 10);
+            
+            animateValue(target, 0, endValue, 2000);
+            observer.unobserve(target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    factNumbers.forEach(el => {
+        const valueStr = el.textContent.replace(/,/g, '');
+        const value = parseInt(valueStr, 10);
+        if (!isNaN(value)) {
+           el.setAttribute('data-target', value);
+           el.textContent = '0';
+           observer.observe(el);
+        }
+    });
+  }
 });
