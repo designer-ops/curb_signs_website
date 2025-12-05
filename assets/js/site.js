@@ -246,13 +246,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Sticky Nav Logic
   const heroBar = document.querySelector('.hero-bar');
-  const heroVideo = document.querySelector('.hero-video');
+  const heroImage = document.querySelector('.hero-image');
 
   if (heroBar) {
     const handleScroll = () => {
       let shouldHaveBackground = false;
 
-      if (heroVideo) {
+      if (heroImage) {
         // Main page: show background when scrolled past 60% of the viewport height
         // The hero is min 70vh, so this ensures background is on before we hit the white section
         shouldHaveBackground = window.scrollY > (window.innerHeight * 0.6);
