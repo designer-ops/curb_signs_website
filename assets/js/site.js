@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const BATCH_SIZE = 12;
     let matchingCards = galleryCards;
     let loadedCount = 0;
+    let observer;
 
     if (filterButtons.length) {
       const normalize = (value = '') => value.toLowerCase();
@@ -164,6 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const search = params.toString();
         const newUrl = `${window.location.pathname}${search ? `?${search}` : ''}${window.location.hash}`;
         window.history.replaceState({}, '', newUrl);
+
+        if (observer && sentinel) {
+          observer.unobserve(sentinel);
+          observer.observe(sentinel);
+        }
       };
 
       const loadMore = () => {
@@ -174,10 +180,13 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       if (sentinel && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
+        observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
+              console.log('Sentinel intersecting. calling loadMore');
               loadMore();
+            } else {
+                console.log('Sentinel NOT intersecting');
             }
           });
         });
