@@ -424,6 +424,11 @@ img {
   text-align: center;
 }
 
+/* Position the button overlay */
+.hero {
+  position: relative;
+}
+
 .hero-button {
   position: absolute;
   top: 50%;
@@ -431,6 +436,24 @@ img {
   transform: translate(-50%, -50%);
   z-index: 5; /* Above overlay and video */
   text-align: center;
+}
+
+/* Button styling */
+.hero-cta-btn {
+  background: #ff6600; /* customize */
+  color: white;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.hero-cta-btn:hover {
+  background: #e05500;
+  cursor: pointer;
 }
   
 .instagram-button {
