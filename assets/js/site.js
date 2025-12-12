@@ -112,6 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const setCardVisibility = (card, shouldShow) => {
         card.hidden = !shouldShow;
         card.style.display = shouldShow ? '' : 'none';
+        if (shouldShow) {
+            // Small delay to ensure display:none is removed before animation starts
+            requestAnimationFrame(() => {
+                card.classList.add('fade-in');
+            });
+        } else {
+            card.classList.remove('fade-in');
+        }
       };
 
       const revealUpTo = (limit) => {
@@ -143,6 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
             .map((item) => normalize(item.trim()))
             .filter(Boolean);
           return filter === 'all' || categories.includes(filter);
+        });
+
+        // Reset for new filter
+        galleryCards.forEach((card) => {
+            card.classList.remove('fade-in');
         });
 
         galleryCards.forEach((card) => {
@@ -185,11 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
               console.log('Sentinel intersecting. calling loadMore');
               loadMore();
-            } else {
-                console.log('Sentinel NOT intersecting');
             }
           });
-        });
+        }, { rootMargin: '400px' });
         observer.observe(sentinel);
       } else if (sentinel) {
         // Fallback: load all if IntersectionObserver is unavailable
