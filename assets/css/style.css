@@ -431,7 +431,7 @@ img {
 
 .hero-button {
   position: absolute;
-  top: 50%;
+  top: 40px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5; /* Above overlay and video */
