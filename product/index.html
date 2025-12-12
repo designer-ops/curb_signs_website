@@ -66,22 +66,8 @@ description: Browse the full Curb Signs product gallery and filter by type.
           </aside>
 
           <div class="gallery-grid" data-gallery role="list">
-            {% for photo in site.static_files %}
-            {% assign rel_path = photo.relative_path | default: photo.path %}
-            {% if rel_path contains "/assets/images/products_categories/" and photo.name != ".DS_Store" %}
-            {% assign folder_name = rel_path | split: "/assets/images/products_categories/" | last | split: "/" | first
-            %}
-            {% assign slug = folder_name | downcase | replace: " ", "-" %}
-            {% if folder_name == "Awning" %}{% assign slug = "awnings" %}{% endif %}
-            {% if folder_name == "Custom" %}{% assign slug = "custom-work" %}{% endif %}
-            {% if folder_name == "Vinyl" %}{% assign slug = "vinyls" %}{% endif %}
-            <article class="gallery-card" data-category="{{ slug }}" role="listitem">
-              <div class="gallery-media">
-                <img src="{{ photo.path | relative_url }}" alt="{{ folder_name }} photo" loading="lazy">
-              </div>
-            </article>
-            {% endif %}
-            {% endfor %}
+            <!-- GALLERY_START -->
+            <!-- GALLERY_END -->
 
             <p class="gallery-empty" data-gallery-empty hidden>No items match this filter yet.</p>
             <div class="gallery-sentinel" data-gallery-sentinel aria-hidden="true"></div>

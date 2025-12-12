@@ -1,0 +1,34 @@
+name: Update Gallery
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'assets/images/products_categories/**'
+      - 'scripts/update_gallery.py'
+      - 'product/index.html'
+
+permissions:
+  contents: write
+
+jobs:
+  update-gallery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run update gallery script
+        run: python scripts/update_gallery.py
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update gallery in product/index.html"
+          file_pattern: "product/index.html"
