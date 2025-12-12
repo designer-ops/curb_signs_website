@@ -424,6 +424,15 @@ img {
   text-align: center;
 }
 
+.hero-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5; /* Above overlay and video */
+  text-align: center;
+}
+  
 .instagram-button {
   display: inline-flex;
   align-items: center;
