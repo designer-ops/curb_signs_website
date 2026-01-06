@@ -821,7 +821,8 @@ img {
 .gallery-modal__content {
   position: relative;
   max-width: min(90vw, 1200px);
-  max-height: 90vh;
+  /* limit height more strictly to avoid overly tall modals on very tall images */
+  max-height: min(calc(100vh - 6rem), 900px);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 24px 54px rgba(0, 0, 0, 0.35);
@@ -836,7 +837,8 @@ img {
 .gallery-modal__content img {
   /* Preserve aspect ratio and scale down to fit the modal box */
   max-width: 100%;
-  max-height: 100%;
+  /* ensure image fits comfortably within viewport and modal chrome */
+  max-height: calc(100vh - 8rem);
   width: auto;
   height: auto;
   object-fit: contain;
@@ -953,57 +955,4 @@ img {
 
   .primary-nav li {
     width: 100%;
-  }
-
-  .primary-nav a {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .primary-nav .submenu {
-    margin-top: 0.5rem;
-    padding: 0.5rem 0.75rem 0.75rem;
-  }
-
-  .section {
-    padding: 3rem 0;
-  }
-
-  .blockquote-area blockquote {
-    padding: 1.75rem;
-    font-size: 1rem;
-  }
-
-  .action-area p {
-    letter-spacing: 0.2em;
-  }
-
-  .project-card img {
-    height: 160px;
-  }
-
-  .gallery-head {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
 }
-
-@media (max-width: 540px) {
-  .hero-bar {
-    padding-top: 2rem;
-  }
-
-  .primary-nav ul {
-    padding: 0.85rem;
-  }
-
-  .primary-nav a {
-    font-size: 0.78rem;
-  }
-
-... (file continues)
