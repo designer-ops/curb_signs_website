@@ -819,6 +819,7 @@ img {
   max-height: 90vh;
   border-radius: 16px;
   overflow: hidden;
+  object-fit: contain;
   box-shadow: 0 24px 54px rgba(0, 0, 0, 0.35);
 }
 
