@@ -56,8 +56,6 @@ img {
   position: relative;
   min-height: 70vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
 }
 
@@ -117,7 +115,6 @@ img {
   padding: 0 2rem 2.75rem;
   max-width: 720px;
   text-align: center;
-  padding-bottom: 10vh;
   
 }
 
