@@ -1,5 +1,5 @@
-title: Curb Signs
-description: Custom curb signs for birthdays, events, and celebrations in the Greater Toronto Area.
+title: Curb Signs Inc.
+description: Expert custom signage manufacturer in Toronto. Billboards, channel letters, wayfinding solutions & interior displays. Full-service design and installation.
 baseurl: ""
 url: "https://curbsigns.ca"
 repository: designer-ops/curb_signs_website
@@ -7,7 +7,10 @@ repository: designer-ops/curb_signs_website
 # Build settings
 markdown: kramdown
 theme: null
-plugins: []
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
 
 # Exclude build artifacts
 exclude:
@@ -16,3 +19,13 @@ exclude:
   - node_modules
   - vendor
   - README.md
+
+# SEO Settings
+author:
+  name: Curb Signs Inc.
+  email: info@curbsigns.ca
+  
+twitter:
+  username: curbsignsinc
+
+og_image: /assets/images/curb-signsing-white.png
